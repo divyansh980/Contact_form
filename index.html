@@ -37,11 +37,43 @@
   </div>
   <div class="container">
 
+
+
     <form id="contact-form">
+      <label for="name">Name*</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name">
+      <span id="name-error" class="error-message"></span>
+    
+      <label for="email">Email*</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email">
+      <span id="email-error" class="error-message"></span>
+    
+      <label for="phone">Phone*</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+      <span id="phone-error" class="error-message"></span>
+    
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" name="subject" placeholder="Enter your subject">
+      <span id="subject-error" class="error-message"></span>
+    
+      <label for="message">Message*</label>
+      <textarea id="message" name="message" placeholder="Enter your message"></textarea>
+      <span id="message-error" class="error-message"></span>
+
+      <div class="terms">
+        <input type="checkbox" id="terms" class="tick" >
+        <label for="terms">Accept <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a></label>
+      </div>
+    
+      <button type="submit">Send Message</button>
+    </form>
+    
+
+    <!-- <form id="contact-form">
       <div class="form-row">
         <div class="form-group">
           <label for="name">Name*</label>
-          <input type="text" id="name" name="name" placeholder="Enter your name" class="input-group" >
+          <input type="text" id="name" name="name" placeholder="Enter your name" class="input-group", pattern="[A-Za-z]+",title="Please enter only contain alphabets" >
           <small class="error-message" id="name-error"></small>
         </div>
         <div class="form-group">
@@ -52,7 +84,7 @@
       </div>
     
       <label for="phone">Phone*</label>
-      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number", pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}",type="tel" >
+      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number", pattern="[0-9]+",title="Please enter only contain digits",maxlength="10",oniput="this.value=this.value.replace(/[^0-9]/g,'');" >
       <small class="error-message" id="phone-error"></small>
     
       <label for="subject">Subject*</label>
@@ -68,36 +100,9 @@
         <label for="terms">Accept <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a></label>
       </div>
       <button type="submit">Send Message</button>
-    </form>
-
-      <!-- <form id="contact-form">
-      <label for="name">Name*</label>
-      <input type="text" id="name" name="name" placeholder="Enter your name" class="input-group"  />
-      <small class="error-message">Please enter your name</small>
-
-      <label for="email">Email*</label>
-      <input type="email" id="email" name="email" placeholder="Enter your email"  />
-      <small class="error-message">Please enter your email</small>
-
-      <label for="phone">Phone*</label>
-      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number"  />
-      <small class="error-message">Please enter your number</small>
-
-      <label for="subject">Subject*</label>
-      <input type="text" id="subject" name="subject" placeholder="Enter your subject"  />
-      <small class="error-message">Please enter your subject</small>
-
-      <label for="message">Message</label>
-      <textarea id="message" name="message" placeholder="Write your message"></textarea>
-
-      <div class="terms">
-        <input type="checkbox" id="terms" required />
-        <label for="terms">Accept <a href="#">Terms & Conditions</a> and
-          <a href="#">Privacy Policy</a></label>
-      </div>
-
-      <button type="submit">Send Message</button>
     </form> -->
+
+    
   </div>
 
   <script src="script.js"></script>

@@ -1,72 +1,118 @@
+// document.getElementById("contact-form").addEventListener("submit", function (event) {
+//   event.preventDefault(); // Prevent form submission
+
+//   function validate() {
+//     const name = document.getElementById("name").value.trim();
+//     const email = document.getElementById("email").value.trim();
+//     const phone = document.getElementById("phone").value.trim();
+//     const subject = document.getElementById("subject").value.trim();
+//     const message = document.getElementById("message").value.trim();
+ 
+//     var valid = true;
+    
+//     if(name == ""){
+//       document.getElementById("name-error").innerText = "Please enter your name.";
+//       valid = false;
+//     }
+//     if (email == "") {
+//       document.getElementById("email-error").innerText = "Please enter your email.";
+//       valid = false;
+//     }
+//     if (phone == "") {
+//       document.getElementById("phone-error").innerText = "Please enter your phone number.";
+//       valid = false;
+//     }
+//     if (subject == "") {
+//       document.getElementById("subject-error").innerText = "Please enter your subject.";
+//       valid = false;
+//     }
+//     if (message == "") {
+//       document.getElementById("message-error").innerText = "Please enter your message.";
+//       valid = false;
+//     }
+    
+
+//     return valid;
+//   }
+
+//   if (validate()) {
+//     alert("Form submitted successfully!");
+//     this.submit();
+    
+//   } else {
+    
+//     alert("error! Please fill required fields.");
+//   }
+
+// });
+
 document.getElementById("contact-form").addEventListener("submit", function (event) {
   event.preventDefault(); // Prevent form submission
-  // document.getElementById("name-error").innerHTML = "I have changed!";
-  // Get input field values
-  // const name = document.getElementById("name").value.trim();
-  // const email = document.getElementById("email").value.trim();
-  // const phone = document.getElementById("phone").value.trim();
-  // const subject = document.getElementById("subject").value.trim();
-  // const message = document.getElementById("message").value.trim
-
-  // Validation message
-  // let validationMessage = "";
-
-  // if (!name && !email && !phone && !subject && !message) {
-  //   validationMessage = "Please enter your detail.";
-  // } else if (!name) {
-  //   validationMessage = "Please enter your name.";
-  // } else if (!email) {
-  //   validationMessage = "Please enter your email.";
-  // }else if(!phone){
-  //   validationMessage = "Please enter your phone number.";
-  // }else if(!subject){
-  //   validationMessage = "Please enter your subject.";
-  // }else if(!message){
-  //   validationMessage = "Please enter your message.";
-  // }
-
 
   function validate() {
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
     const phone = document.getElementById("phone").value.trim();
-    const subject = document.getElementById("subject").value.trim();
+    const subject = document.getElementById("subject") ? document.getElementById("subject").value.trim() : ""; // Optional field
     const message = document.getElementById("message").value.trim();
- 
-    var valid = true;
-    
-    if(name == ""){
+
+    let valid = true;
+
+    // Clear previous error messages
+    document.getElementById("name-error").innerText = "";
+    document.getElementById("email-error").innerText = "";
+    document.getElementById("phone-error").innerText = "";
+    if (document.getElementById("subject-error")) {
+      document.getElementById("subject-error").innerText = "";
+    }
+    document.getElementById("message-error").innerText = "";
+
+    // Name validation (letters only)
+    if (name === "") {
       document.getElementById("name-error").innerText = "Please enter your name.";
       valid = false;
+    } else if (!/^[A-Za-z\s]+$/.test(name)) {
+      document.getElementById("name-error").innerText = "Name can only contain letters.";
+      valid = false;
     }
-    if (email == "") {
+
+    // Email validation
+    if (email === "") {
       document.getElementById("email-error").innerText = "Please enter your email.";
       valid = false;
-    }
-    if (phone == "") {
-      document.getElementById("phone-error").innerText = "Please enter your phone number.";
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      document.getElementById("email-error").innerText = "Please enter a valid email address.";
       valid = false;
     }
-    if (subject == "") {
+
+    // Phone validation (digits only)
+    if (phone === "") {
+      document.getElementById("phone-error").innerText = "Please enter your phone number.";
+      valid = false;
+    } else if (!/^[0-9]+$/.test(phone)) {
+      document.getElementById("phone-error").innerText = "Phone number can only contain digits.";
+      valid = false;
+    }
+
+    // Subject validation (if applicable)
+    if (subject !== undefined && subject === "") {
       document.getElementById("subject-error").innerText = "Please enter your subject.";
       valid = false;
     }
-    if (message == "") {
+
+    // Message validation
+    if (message === "") {
       document.getElementById("message-error").innerText = "Please enter your message.";
       valid = false;
     }
-    
 
     return valid;
   }
 
   if (validate()) {
     alert("Form submitted successfully!");
-    this.submit();
-    
+    this.submit(); // Submit the form
   } else {
-    
-    alert("error! Please fill required fields.");
+    alert("Error! Please fill required fields.");
   }
-
 });
