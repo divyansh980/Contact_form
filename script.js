@@ -37,17 +37,6 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
       valid = false;
     }
 
-    // // Phone validation (10 digits only)
-    // if (phone === "") {
-    //   document.getElementById("phone-error").innerText = "Please enter your phone number.";
-    //   valid = false;
-    // } else if (!/^d{10}$/.test(phone)) {
-    //   document.getElementById("phone-error").innerText = "Phone number must be exactly 10 digits.";
-    //   valid = false;
-    // }else{
-    //   document.getElementById("phone-error").innerText = "";
-    // }
-
 
       // Phone validation
   if (phone === "") {

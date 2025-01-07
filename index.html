@@ -39,7 +39,7 @@
 
 
 
-    <form id="contact-form">
+    <form id="contact-form" action="submit_form.php" method="POST">
       <label for="name">Name*</label>
       <input type="text" id="name" name="name" placeholder="Enter your name">
       <span id="name-error" class="error-message"></span>
@@ -84,7 +84,7 @@
       </div>
     
       <label for="phone">Phone*</label>
-      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number", pattern="[0-9]+",title="Please enter only contain digits",maxlength="10",oniput="this.value=this.value.replace(/[^0-9]/g,'');" >
+      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number", pattern="[0-9]+",title="Please enter only contain digits",maxlength="10",oninput="this.value=this.value.replace(/[^0-9]/g,'');" >
       <small class="error-message" id="phone-error"></small>
     
       <label for="subject">Subject*</label>
