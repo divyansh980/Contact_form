@@ -1,111 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>From</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>From</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-</head>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
 
-<body>
-  <div>
-    <header>
-      <h1>Dilx</h1>
-      <nav>
-        <a href="#">Home</a>
-        <a href="#">Pages</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Projects</a>
-        <a href="#">Blog</a>
-        <a href="#">Contact</a>
-      </nav>
-
-      <div class="header-buttons">
-        <button class="btn btn-outline-light" type="sign-up">Sign Up</button>
-        <button class="btn btn-outline-light" type="sign-in">Sign In</button>
+  <body>
+    <div>
+      <header>
+        <!-- <a href="index.html">
+      <div class="logo-container">
+        <img src="pic/logo.png" alt="logo" class="logo">
       </div>
-    </header>
-  </div>
-  <div class="container">
-
-
-
-    <form id="contact-form" action="submit_form.php" method="POST">
-      <label for="name">Name*</label>
-      <input type="text" id="name" name="name" placeholder="Enter your name">
-      <span id="name-error" class="error-message"></span>
-    
-      <label for="email">Email*</label>
-      <input type="email" id="email" name="email" placeholder="Enter your email">
-      <span id="email-error" class="error-message"></span>
-    
-      <label for="phone">Phone*</label>
-      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
-      <span id="phone-error" class="error-message"></span>
-    
-      <label for="subject">Subject*</label>
-      <input type="text" id="subject" name="subject" placeholder="Enter your subject">
-      <span id="subject-error" class="error-message"></span>
-    
-      <label for="message">Message</label>
-      <textarea id="message" name="message" placeholder="Enter your message"></textarea>
-      <span id="message-error" class="error-message"></span>
-
-      <div class="terms">
-        <input type="checkbox" id="terms" class="tick" >
-        <label for="terms">Accept <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a></label>
-      </div>
-    
-      <button type="submit">Send Message +</button>
-    </form>
-    
-
-    <!-- <form id="contact-form">
-      <div class="form-row">
-        <div class="form-group">
-          <label for="name">Name*</label>
-          <input type="text" id="name" name="name" placeholder="Enter your name" class="input-group", pattern="[A-Za-z]+",title="Please enter only contain alphabets" >
-          <small class="error-message" id="name-error"></small>
+    </a> -->
+        <i class="fa-brands fa-playstation fa-lg" style="color: #74c0fc"
+          >_DilX</i
+        >
+        <!-- <h1>Dilx</h1> -->
+        <section style="color: #fff">
+          <nav class="stroke">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Pages</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Projects</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </section>
+        
+        <div class="header-buttons">
+          <button class="btn btn-outline-light" type="sign-up">Sign Up</button>
+          <button class="btn btn-outline-light" type="sign-in">Sign In</button>
         </div>
-        <div class="form-group">
-          <label for="email">Email*</label>
-          <input type="email" id="email" name="email" placeholder="Enter your email" >
-          <small class="error-message" id="email-error"></small>
+      </header>
+    </div>
+    <div class="container">
+      <form id="contact-form" action="submit_form.php" method="POST">
+        <label for="name">Name*</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your name"
+        />
+        <span id="name-error" class="error-message"></span>
+
+        <label for="email">Email*</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+        />
+        <span id="email-error" class="error-message"></span>
+
+        <label for="phone">Phone*</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="Enter your phone number"
+        />
+        <span id="phone-error" class="error-message"></span>
+
+        <label for="subject">Subject*</label>
+        <input
+          type="text"
+          id="subject"
+          name="subject"
+          placeholder="Enter your subject"
+        />
+        <span id="subject-error" class="error-message"></span>
+
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Enter your message"
+        ></textarea>
+        <span id="message-error" class="error-message"></span>
+
+        <div class="terms">
+          <!-- <input type="checkbox" id="terms" class="tick" > -->
+          <div
+            class="g-recaptcha"
+            data-sitekey="6LfbiLAqAAAAAIA7ix2sUy4kHKNPjAEIyUbBqfZz"
+            data-callback="enableSubmitbtn"
+          ></div>
+          <label for="terms"
+            >Accept
+            <a href="https://policies.google.com/terms?hl=en" target="_blank"
+              >Terms & Conditions</a
+            >
+            and
+            <a href="https://policies.google.com/privacy?hl=en" target="_blank"
+              >Privacy Policy</a
+            ></label
+          >
         </div>
-      </div>
-    
-      <label for="phone">Phone*</label>
-      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number", pattern="[0-9]+",title="Please enter only contain digits",maxlength="10",oninput="this.value=this.value.replace(/[^0-9]/g,'');" >
-      <small class="error-message" id="phone-error"></small>
-    
-      <label for="subject">Subject*</label>
-      <input type="text" id="subject" name="subject" placeholder="Enter your subject" >
-      <small class="error-message" id="subject-error"></small>
-    
-      <label for="message">Message</label>
-      <textarea id="message" name="message" placeholder="Write your message"></textarea>
-      <small class="error-message" id="message-error"></small>
-    
-      <div class="terms">
-        <input type="checkbox" id="terms" class="tick" >
-        <label for="terms">Accept <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a></label>
-      </div>
-      <button type="submit">Send Message</button>
-    </form> -->
 
-    
-  </div>
+        <button type="submit" id="sendbtn" disabled="disabled">
+          Send Message +
+        </button>
+      </form>
+    </div>
 
-  <script src="script.js"></script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>

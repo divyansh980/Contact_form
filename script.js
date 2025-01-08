@@ -80,51 +80,9 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
 
 
 
-// document.getElementById("contact-form").addEventListener("submit", function (event) {
-//   event.preventDefault(); // Prevent form submission
+// recaptcha intigration
 
-//   function validate() {
-//     const name = document.getElementById("name").value.trim();
-//     const email = document.getElementById("email").value.trim();
-//     const phone = document.getElementById("phone").value.trim();
-//     const subject = document.getElementById("subject").value.trim();
-//     const message = document.getElementById("message").value.trim();
- 
-//     var valid = true;
-    
-//     if(name == ""){
-//       document.getElementById("name-error").innerText = "Please enter your name.";
-//       valid = false;
-//     }
-//     if (email == "") {
-//       document.getElementById("email-error").innerText = "Please enter your email.";
-//       valid = false;
-//     }
-//     if (phone == "") {
-//       document.getElementById("phone-error").innerText = "Please enter your phone number.";
-//       valid = false;
-//     }
-//     if (subject == "") {
-//       document.getElementById("subject-error").innerText = "Please enter your subject.";
-//       valid = false;
-//     }
-//     if (message == "") {
-//       document.getElementById("message-error").innerText = "Please enter your message.";
-//       valid = false;
-//     }
-    
-
-//     return valid;
-//   }
-
-//   if (validate()) {
-//     alert("Form submitted successfully!");
-//     this.submit();
-    
-//   } else {
-    
-//     alert("error! Please fill required fields.");
-//   }
-
-// });
+function enableSubmitbtn(){
+  document.getElementById("sendbtn").disabled= false;
+}
 

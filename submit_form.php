@@ -31,7 +31,7 @@ if($_SERVER["REQUEST_METHOD"] =="POST"){
                 VALUES ('$name', '$email', '$phone', '$subject', '$message')";
 
         if($conn->query($sql) === true){
-                echo "Form submitted successfully.";
+                echo "Form submitted successfully.--Bolo Jingalala😁";
 
         }else{
                 echo "Error!: " . $sql . "<br>" . $conn->error;
